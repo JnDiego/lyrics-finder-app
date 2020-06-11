@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/lyrics-finder-app/static/css/main.f71191c7.chunk.css",
+    "main.js": "/lyrics-finder-app/static/js/main.a634fda4.chunk.js",
+    "main.js.map": "/lyrics-finder-app/static/js/main.a634fda4.chunk.js.map",
+    "runtime-main.js": "/lyrics-finder-app/static/js/runtime-main.f4908613.js",
+    "runtime-main.js.map": "/lyrics-finder-app/static/js/runtime-main.f4908613.js.map",
+    "static/js/2.0ef361c0.chunk.js": "/lyrics-finder-app/static/js/2.0ef361c0.chunk.js",
+    "static/js/2.0ef361c0.chunk.js.map": "/lyrics-finder-app/static/js/2.0ef361c0.chunk.js.map",
+    "index.html": "/lyrics-finder-app/index.html",
+    "precache-manifest.ef6b30c0eaff655d563c8eb3bb150e9a.js": "/lyrics-finder-app/precache-manifest.ef6b30c0eaff655d563c8eb3bb150e9a.js",
+    "service-worker.js": "/lyrics-finder-app/service-worker.js",
+    "static/css/main.f71191c7.chunk.css.map": "/lyrics-finder-app/static/css/main.f71191c7.chunk.css.map",
+    "static/js/2.0ef361c0.chunk.js.LICENSE.txt": "/lyrics-finder-app/static/js/2.0ef361c0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f4908613.js",
+    "static/js/2.0ef361c0.chunk.js",
+    "static/css/main.f71191c7.chunk.css",
+    "static/js/main.a634fda4.chunk.js"
+  ]
+}
