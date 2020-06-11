@@ -8,15 +8,23 @@ import Song from './components/Song';
 function App() {
   const [lyricsSearch, setLyricsSearch] = useState({});
   const [lyrics, setLyrics] = useState('');
+  const [artistInfo, setArtistInfo] = useState({});
   useEffect(() => {
     if (Object.keys(lyricsSearch).length === 0) return;
 
     const fetchApiLyrics = async () => {
       const { artist, song } = lyricsSearch;
       const url = `https://api.lyrics.ovh/v1/${artist}/${song}`;
-      const result = await axios.get(url);
-      setLyrics(result.data.lyrics);
+      const urlInfoArtist = `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${artist}`;
+
+      const [lyrics, information] = await Promise.all([axios.get(url), axios.get(urlInfoArtist)]);
+
+      setLyrics(lyrics.data.lyrics);
+      setArtistInfo(information.data.artist[0]);
+
+      //setLyrics(result.data.lyrics);
     };
+
     fetchApiLyrics();
   }, [lyricsSearch]);
   return (
