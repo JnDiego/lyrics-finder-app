@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const Form = () => {
+const Form = ({ setLyricsSearch }) => {
   const [dataSearch, setDataSearch] = useState({
     artist: '',
     song: '',
@@ -28,10 +28,12 @@ const Form = () => {
     }
     setError(false);
     //Pasar al componente principal
+    setLyricsSearch(dataSearch);
   };
 
   return (
     <div className="bg-info">
+      {error ? <p className="alert alert-danger text-center p-2">All fields are required.</p> : null}
       <div className="container">
         <div className="row">
           <form className="col card text-white bg-transparent mb-5 pt-5 pb-2" onSubmit={searchInfo}>
