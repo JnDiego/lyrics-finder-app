@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
 import Song from './components/Song';
+import Artist from './components/Artist';
 
 function App() {
   const [lyricsSearch, setLyricsSearch] = useState({});
@@ -20,19 +21,21 @@ function App() {
       const [lyrics, information] = await Promise.all([axios.get(url), axios.get(urlInfoArtist)]);
 
       setLyrics(lyrics.data.lyrics);
-      setArtistInfo(information.data.artist[0]);
+      setArtistInfo(information.data.artists[0]);
 
-      //setLyrics(result.data.lyrics);
+      setLyricsSearch({});
     };
 
     fetchApiLyrics();
-  }, [lyricsSearch]);
+  }, [lyricsSearch, artistInfo]);
   return (
     <Fragment>
       <Form setLyricsSearch={setLyricsSearch} />
       <div className="container mt-5">
         <div className="row">
-          <div className="col-md-6"></div>
+          <div className="col-md-6">
+            <Artist artistInfo={artistInfo} />
+          </div>
           <div className="col-md-6">
             <Song lyrics={lyrics} />
           </div>
