@@ -3,6 +3,7 @@ import Form from './components/Form';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
+import Song from './components/Song';
 
 function App() {
   const [lyricsSearch, setLyricsSearch] = useState({});
@@ -21,6 +22,14 @@ function App() {
   return (
     <Fragment>
       <Form setLyricsSearch={setLyricsSearch} />
+      <div className="container mt-5">
+        <div className="row">
+          <div className="col-md-6"></div>
+          <div className="col-md-6">
+            <Song lyrics={lyrics} />
+          </div>
+        </div>
+      </div>
     </Fragment>
   );
 }
