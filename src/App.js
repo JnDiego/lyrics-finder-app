@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
+import Form from './components/Form';
 
 function App() {
   return (
     <Fragment>
-      <h1>Works!</h1>
+      <Form />
     </Fragment>
   );
 }
